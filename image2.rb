@@ -13,7 +13,7 @@ class Image
    end
  end
 
-# or alt approach: make copy of array and modify, optimize by combining those steps
+
  def blur!
    ones = []
    @image.each_with_index do |rows, row|
@@ -22,7 +22,7 @@ class Image
        end
    end
    ones.each do |row, col|
-     #row, col = index
+    
      @image[row-1][col]=1 if row-1 >= 0
      @image[row+1][col]=1 if row+1 < number_rows
      @image[row][col-1]=1 if col-1 >= 0
