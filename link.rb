@@ -51,9 +51,11 @@ end
 node1 =LinkedListNode.new(37)
 node2 = LinkedListNode.new(99, node1)
 node3 = LinkedListNode.new(12, node2)
+node4 = LinkedListNode.new(29, node3)
 
 
-print_values(node3)
+print_values(node4)
 puts "---------"
-revlist = reverse_list(node3)
+
+revlist = reverse_list(node4)
 print_values(revlist)
