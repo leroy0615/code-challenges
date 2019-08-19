@@ -17,13 +17,10 @@ def print_values(list_node)
   end
 end
 
-# reverse_list (using mutation) method start provided in lesson
-def reverse_list2(list, previous=nil)     # expecting recursion
-  # do stuff
+def reverse_list2(list, previous=nil)    
   if list
     cdr = list.next_node
-  #print_values(cdr)         # for testing
-    list.next_node = previous     # previous = nil on first pass
+    list.next_node = previous     
     reverse_list2(cdr, list)
   else
     previous
@@ -33,7 +30,7 @@ end
 node1 = LinkedListNode.new(37)
 node2 = LinkedListNode.new(99, node1)
 node3 = LinkedListNode.new(12, node2)
-#node1.next_node = node3    # makes it infinite loop
+
 
 puts "original list"
 print_values(node3)
